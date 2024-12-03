@@ -31,8 +31,8 @@ class Character {
     this.hp += randomNum;
     const randomNum2 = Math.floor(Math.random()*(11)+10);
     this.att += randomNum2;
-    console.log(`${this.hp}의 체력이 ${randomNum}만큼 증가되었습니다.`)
-    console.log(`${this.att}의 공격력이 ${randomNum2}만큼 증가되었습니다.`)
+    console.log(`${this.name}의 체력이 ${randomNum}만큼 증가되었습니다.`)
+    console.log(`${this.name}의 공격력이 ${randomNum2}만큼 증가되었습니다.`)
   }
 
 }
