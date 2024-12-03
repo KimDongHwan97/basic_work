@@ -7,44 +7,26 @@
 //     5. 실패(reject) 시 “보물을 찾는 데 실패했습니다. 다시 시도하세요.” 메시지를 반환.
 // 3. findTreasure를 호출한 뒤 .then()과 .catch()를 사용하여 성공과 실패 메시지를 출력하세요.
 
-// const findTreasure() = new Promise((resolve, reject) =>{
-//     setTimeout(() => {
-//         const success = Math.random() < 0.1;
-//         if(success){
-//             resolve("성공");
-//         }else
-//             reject("실패");
-//     },3000);
-// });
-
-// findTreasure()
-//   .then((message) => {
-//     console.log(message); // 성공 메시지
-//   })
-//   .catch((error) => {
-//     console.log(error); // 실패 메시지
-//   });
-
-
-  function findTreasure() {
+function findTreasure(){
     return new Promise((resolve, reject) => {
-      console.log("보물을 찾는 중...");
-      setTimeout(() => {
-        const success = Math.random();
-        if (success < 0.1) {
-          resolve("축하합니다! 황금 보물을 발견했습니다!");
-        } else {
-          reject("보물을 찾는 데 실패했습니다. 다시 시도하세요.");
-        }
-      }, 3000);
+        console.log("보물을 찾는 중입니다....")
+        setTimeout(() => {
+            const randomNum = Math.random()
+            if(randomNum < 0.1){
+                resolve("축하합니다! 황금 보물을 발견했습니다!")
+            }else{
+                reject("보물을 찾는 데 실패했습니다. 다시 시도하세요.")
+            }
+        }, 3000);
     });
-  }
-  
-  // findTreasure 호출 및 결과 처리
-  findTreasure()
-    .then((successMessage) => {
-      console.log(successMessage);
-    })
-    .catch((errorMessage) => {
-      console.log(errorMessage);
-    });
+};
+
+
+
+findTreasure()
+ .then((successMessage) => {
+    console.log(successMessage)
+ })
+ .catch((errorMessage) => {
+    console.log(errorMessage)
+ });
