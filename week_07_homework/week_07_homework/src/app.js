@@ -1,0 +1,1 @@
+app.use('/api', );//router 가 들어간다.
